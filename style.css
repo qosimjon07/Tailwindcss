@@ -1,0 +1,32 @@
+body {
+    overflow-x: hidden;
+}
+
+.containert {
+    max-width: 1366px;
+    margin: auto;
+    padding-left: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.stiky {
+    position: sticky;
+    top: 0px;
+}
+
+.grid-box1 {
+    background: linear-gradient(180.89deg, rgb(150, 70, 243) -0.53%, rgb(100, 141, 218) 140%);
+}
+
+.grid-box2 {
+    background: linear-gradient(0.89deg, rgb(243, 70, 229) -0.53%, rgb(240, 59, 59) 140%);
+}
+
+.grid-box3 {
+    background: linear-gradient(180.89deg, rgb(233, 178, 28) -0.53%, rgb(245, 98, 30) 140%);
+}
+
+.gradient {
+    background: linear-gradient(180.89deg, rgb(14, 13, 13) -0.53%, rgb(56, 55, 55) 140%);
+}

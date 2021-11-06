@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+
+<body class="relative">
+    <header class="flex w-full justify-center items-center mx-auto bg-blue-400 py-2">
+        <p class="
+          px-6
+          text-white
+          text-sm
+          font-semibold
+          border-r
+          py-1
+          ">Just-in-Time: The Next Generation of Tailwind CSS
+        </p>
+        <button class="
+          mx-6
+          px-4
+          py-1
+          flex
+          rounded-md
+          items-center
+          text-blue-500
+          font-semibold
+          bg-white
+          text-sm
+          ">
+          <span>LEARN MORE</span>
+          <i class="ri-arrow-right-line text-sm pl-1"></i>
+        </button>
+    </header>
+    <div class="containert static">
+        <div class="flex w-full justify-between items-center py-2">
+            <div class="flex items-center md:mr-24 py-4">
+                <img class="w-10 h-10" src="data:image/png;base64,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"
+                    alt="">
+                <span class="font-semibold text-3xl hidden md:block ml-2">tailwindcss</span>
+            </div>
+            <div class="flex w-full justify-between items-center py-4 border-b mr-5">
+                <div class="flex items-center py-2 font-semibold px-1 w-full" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    <i class="ri-search-line text-gray-400 text-2xl font-medium"></i>
+                    <span class="px-4 text-gray-500">Quick search for anything</span>
+                    <span class="border border-gray-300 rounded-md px-1 text-gray-400">Ctrl K</span>
+                </div>
+                <!-- Modal -->
+                <section class="modal-section">
+                    <div class="modal fade mx-auto" id="exampleModal">
+                        <div class="modal-dialog modal-dialog-centered">
+                            <div class="modal-content h-96 py-4">
+                                <div class="modal-header m-0 p-0 box-content mx-3">
+                                    <div class="flex items-center pb-3">
+                                        <i class="ri-search-line text-blue-500 text-2xl pr-2"></i>
+                                        <input type="text" placeholder="Search docs" class="w-80 text-2xl outline-none">
+                                    </div>
+                                    <span class="px-2 cursor-pointer absolute top-7 right-6 rounded-md border border-gray-500 bg-gray-100 font-medium text-gray-500" data-bs-dismiss="modal">esc</span>
+                                </div>
+                                <div>
+                                    <p class="text-xl mx-3 font-semibold my-2">Resent</p>
+                                    <div class="flex flex-col gap-2 overflow-y-scroll h-64">
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Height</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Font size</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Position</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Sticky</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Learn Gradient</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                        <div class="mx-3 flex items-center justify-between px-3 py-2.5 bg-gray-50 text-gray-900 border rounded-lg hover:text-white hover:bg-blue-400">
+                                            <div class="flex items-center">
+                                                <i class="ri-history-line text-xl pr-3 opacity-70"></i>
+                                                <p class="text-base font-medium m-0 p-0">Box Sizing</p>
+                                            </div>
+                                            <div class="flex items-center">
+                                                <i class="ri-star-line text-xl pr-3 opacity-70"></i>
+                                                <i class="ri-close-line text-2xl opacity-70"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <div class=" flex items-center text-gray-700 font-medium ">
+                    <div class="flex items-center mr-6 ">
+                        <span class="hidden xl:block ">v22.16</span>
+                        <i class="ri-arrow-down-s-line "></i>
+                    </div>
+                    <i class="ri-github-fill text-2xl "></i>
+                </div>
+            </div>
+        </div>
+        <div class="flex w-full gap-2 ">
+            <div class="h-screen w-72 overflow-y-scroll mr-4 relative hidden lg:block">
+                <div class="mb-8 relative pt-6 ">
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/color/36/000000/open-book--v1.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">Documentation</p>
+                    </div>
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/color/36/000000/sugar-cube.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">Components</p>
+                    </div>
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/glyph-neue/36/000000/link.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">Playground</p>
+                    </div>
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/external-icongeek26-outline-colour-icongeek26/36/000000/external-news-news-icongeek26-outline-colour-icongeek26.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">News</p>
+                    </div>
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/external-itim2101-lineal-color-itim2101/36/000000/external-human-resources-business-recruitment-itim2101-lineal-color-itim2101.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">Resources</p>
+                    </div>
+                    <div class="flex items-center py-1 mr-4 ">
+                        <img class="border rounded-md border-gray-600 " src="https://img.icons8.com/fluency/36/000000/mediator.png " />
+                        <p class="pl-3 font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer ">Screencasts</p>
+                    </div>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">GETTING STARTED</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Installation</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Release Notes</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Upgrade Guide</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Editor Support</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Using with Preprocessors</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Optimizing for Production</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Browser Support</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">CORE CONCEPTS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Utility-First</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Responsive Design</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Hover, Focus, & Other States</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Dark Mode</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Adding Base Styles</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Extracting Components</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Adding New Utilities</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Functions & Directives</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">CUSTOMIZATION</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Configuration</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Just-in-Time Mode</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Theme</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Breakpoints</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Colors</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Spacing</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Variants</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Plugins</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Presets</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">BASE STYLES</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Preflight</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">LAYOUT</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Container</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Box Decoration Break</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Box Sizing</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Display</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Floats</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Clear</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Isolation</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Object Fit</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Object Position</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Overflow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Overscroll Behavior</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Position</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Top / Right / Bottom / Left</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Visibility</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Z-Index</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">FLEXBOX AND GRID</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Flex Direction</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Flex Wrap</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Flex</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Flex Grow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Flex Shrink</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Order</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Template Columns</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Column Start / End</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Template Rows</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Row Start / End</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Auto Flow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Auto Columns</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grid Auto Rows</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Gap</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Justify Content</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Justify Items</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Justify Self</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Align Content</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Align Items</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Align Self</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Place Content</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Place Items</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Place Self</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">SPACING</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Padding</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Margin</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Space Between</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">SIZING</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Min-Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Max-Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Height</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Min-Height</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Max-Height</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">TYPOGRAPHY</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Family</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Size</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Smoothing</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Style</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Weight</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Font Variant Numeric</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Letter Spacing</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Line Height</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">List Style Type</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">List Style Position</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Placeholder Color</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Placeholder Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Align</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Color </p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Decoration</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Transform</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Text Overflow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Vertical Align</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Whitespace</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Word Break</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">BACKGROUNDS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Attachment</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Clip</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Color</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Origin</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Position</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Repeat</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Size</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Image</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Gradient Color Stops</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">BORDERS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Radius</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Color</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Style</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Divide Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Divide Color</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Divide Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Divide Style</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Ring Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Ring Color</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Ring Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Ring Offset Width</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Ring Offset Color</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">EFFECTS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Box Shadow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Mix Blend Mode</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Background Blend Mode</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">FILTERS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Filter</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Blur</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Brightness</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Contrast</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Drop Shadow</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Grayscale</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Hue Rotate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Invert</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Saturate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Sepia</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Filter</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Blur</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Brightness</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Contrast</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Grayscale</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Hue Rotate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Invert</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Opacity</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Saturate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Backdrop Sepia</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">TABLES</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Border Collapse</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Table Layout</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">TRANSITIONS AND ANIMATION</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transition Property</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transition Duration</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transition Timing Function</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transition Delay</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Animation</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">TRANSFORMS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transform</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Transform Origin</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Scale</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Rotate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Translate</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Skew</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">INTERACTIVITY</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Appearance</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Cursor</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Outline</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Pointer Events</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Resize</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">User Select</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">SVG</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Fill</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Stroke</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Stroke Width</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">ACCESSIBILITY</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Screen Readers</p>
+                </div>
+                <div class="mb-10 mr-4 ">
+                    <p class="font-medium text-blue-700 w-full mb-4 ">OFFICIAL PLUGINS</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Typography</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Forms</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Aspect Ratio</p>
+                    <p class="font-medium text-gray-500 hover:text-gray-700 w-full cursor-pointer mt-3 ">Line Clamp</p>
+                </div>
+
+            </div>
+            <div class="h-screen w-full overflow-y-scroll pr-5 pb-32">
+                <h1 class="text-5xl pt-4 font-bold">Getting started with Tailwind CSS</h1>
+                <p class="text-2xl font-normal py-3 text-gray-600">Learn Tailwind the way that best matches your learning style.</p>
+
+                <div class="
+                    grid gap-4
+                    grid-cols-1
+                    md:grid-cols-3 
+                    ">
+                    <div class="relative grid-box1 w-full p-4 rounded-3xl">
+                        <p class="text-2xl text-white font-semibold">Read the docs</p>
+                        <p class="text-xl mb-16 md:mb-52 font-normal text-gray-100">Learn how to get Tailwind set up in your project.</p>
+                        <span class="absolute bottom-6 left-5 md:bottom-44 md:left-5 text-white px-3 py-1 rounded-xl font-semibold text-lg bg-gray-400">Start learning</span>
+                    </div>
+                    <div class="relative grid-box2 w-full p-4 rounded-3xl">
+                        <p class="text-2xl text-white font-semibold">Try it in the browser</p>
+                        <p class="text-xl mb-16 md:mb-52 font-normal text-gray-100">Build something with Tailwind in our online playground.</p>
+                        <span class="absolute bottom-6 left-5 md:bottom-44 md:left-5 text-white px-3 py-1 rounded-xl font-semibold text-lg bg-gray-400">Start building</span>
+                    </div>
+                    <div class="relative grid-box3 w-full p-4 rounded-3xl">
+                        <p class="text-2xl text-white font-semibold">Watch the screencasts</p>
+                        <p class="text-xl mb-16 md:mb-52 font-normal text-gray-100">Learn more about Tailwind directly from the team on our channel.</p>
+                        <span class="absolute bottom-6 left-5 md:bottom-44 md:left-5 text-white px-3 py-1 rounded-xl font-semibold text-lg bg-gray-400">Start watching</span>
+                    </div>
+                </div>
+                <div class="
+                    p-3
+                    mt-4
+                    md:flex
+                    items-center
+                    gradient 
+                    rounded-2xl
+                    ">
+                    <div>
+                        <img src="data:image/png;base64,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"
+                            class="w-64 max-h-14 rounded-lg m-0 p-0" alt="">
+                    </div>
+                    <div>
+                        <p class="text-xl md:text-lg my-3  md:my-0 w-auto p-0 text-white md:mx-5 w-40 font-semibold">Beautiful UI components, crafted by the creators of Tailwind CSS</p>
+                    </div>
+                    <div>
+                        <p class="text-lg w-48 m-0 p-0 width items-center bg-white px-3 py-2 rounded-lg text-black font-semibold">Browse components</p>
+                    </div>
+                </div>
+                <h1 class="text-4xl font-bold mt-10 mb-5">What’s new in Tailwind</h1>
+                <div class="
+                    mb-10
+                    grid gap-4
+                    grid-cols-2
+                    md:grid-cols-3 
+                    ">
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                        <i class="ri-focus-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Focus Ring Utilities</p>
+                    </div>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                        <i class="ri-contrast-2-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Dark Mode</p>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                        <i class="ri-line-chart-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Extended Color Palette</p>
+                    </div>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                        <i class="ri-stack-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Extend Variants</p>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                        <i class="ri-window-fill text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Extra Wide Breakpoint</p>
+                    </div>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                        <i class="ri-table-2 text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Shareable Presets</p>
+                    </div>
+
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                        <i class="ri-layout-6-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Gradients</p>
+                    </div>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
+                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                        <i class="ri-file-chart-line text-4xl"></i>
+                        <p class="text-xl font-semibold pt-3">Animations</p>
+                    </div>
+                </div>
+                <div class="md:flex items-start justify-between mb-3">
+                    <h1 class="text-4xl font-bold md:mb-5">Latest Updates</h1>
+                    <p class="text-xl font-normal mt-2">View all the latest updates</p>
+                </div>
+                <div class="w-full p-4 rounded-3xl bg-gray-200 text-gray-600 transition duration-300">
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Jun 18. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Jun 18. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">Tailwind CSS v2.2</p>
+                            <p class="text-lg">Over the last few weeks, we've been having a ton of fun dumping new and exciting features into Tailwind. Now feels like the right time to cut a release, so here it is — Tailwind CSS v2.2! We've built-in a new high-performance
+                                CLI tool, added before and after pseudo-element support, introduced new sibling selector variants, the ability to style highlighted text, and tons more.</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Apr 6. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Apr 6. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">Tailwind CSS v2.1</p>
+                            <p class="text-lg">We just released Tailwind CSS v2.1 which brings the new JIT engine to core, adds first-class CSS filter support, and more!</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 15. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Mar 15. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">Welcoming James McDonald to Tailwind Labs</p>
+                            <p class="text-lg">One of the hardest constraints we've had to deal with as we've improved Tailwind CSS over the years is the generated file size in development. With enough customizations to your config file, the generated CSS can reach 10mb
+                                or more, and there's only so much CSS that build tools and even the browser itself will comfortably tolerate.</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 15. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Mar 15. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">"Tailwind CSS: From Zero to Production" on YouTube</p>
+                            <p class="text-lg">Today we're excited to release Tailwind CSS: From Zero to Production, a new screencast series that teaches you everything you need to know to get up and running with Tailwind CSS v2.0 from scratch.</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Sep 15. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Sep 15. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">"Welcoming David Luhr to Tailwind Labs</p>
+                            <p class="text-lg">We started working with David Luhr last summer on a project-by-project basis to help us develop a Figma version of Tailwind UI (almost ready!), as well as to leverage his accessibility expertise when building Tailwind UI templates,
+                                ensuring we were following best practices and delivering markup that would work for everyone, no matter what tools they use to browse the web. Today we're excited to share that David has joined the team full-time!</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">June 15. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">June 15. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">"Multi-line truncation with @tailwindcss/line-clamp</p>
+                            <p class="text-lg">Imagine you're implementing a beautiful design you or someone on your team carefully crafted in Figma. You've nailed all the different layouts at each breakpoint, perfected the whitespace and typography, and the photography
+                                you're using is really bringing the design to life.</p>
+                        </div>
+                    </div>
+                    <div class="flex p-4 hover:bg-white rounded-lg">
+                        <div class="flex min-w-40">
+                            <i class="ri-record-circle-line text-2xl"></i>
+                            <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 25. 2021</p>
+                        </div>
+                        <div class="w-4/5 ml-3 md:m-0">
+                            <p class="text-xl m-0 py-0 block md:hidden">Mar 25. 2021</p>
+                            <p class="text-xl m-0 p-0 font-semibold text-black">"Tailwind CSS v2.0</p>
+                            <p class="text-lg">Today we're finally releasing Tailwind CSS v2.0, including an all-new color palette, dark mode support, and tons more!.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script.js "></script>
+</body>
+
+</html>
