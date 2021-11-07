@@ -48,11 +48,11 @@
                     alt="">
                 <span class="font-semibold text-3xl hidden md:block ml-2">tailwindcss</span>
             </div>
-            <div class="flex w-full justify-between items-center py-4 border-b mr-5">
+            <div class="flex w-full justify-between items-center py-4 ml-4 md:ml-0 border-b mr-5">
                 <div class="flex items-center py-2 font-semibold px-1 w-full" data-bs-toggle="modal" data-bs-target="#exampleModal">
                     <i class="ri-search-line text-gray-400 text-2xl font-medium"></i>
-                    <span class="px-4 text-gray-500">Quick search for anything</span>
-                    <span class="border border-gray-300 rounded-md px-1 text-gray-400">Ctrl K</span>
+                    <span class="px-4 text-gray-500 hidden md:block">Quick search for anything</span>
+                    <span class="border border-gray-300 rounded-md px-1 text-gray-400 hidden lg:block">Ctrl K</span>
                 </div>
                 <!-- Modal -->
                 <section class="modal-section">
@@ -136,8 +136,8 @@
                     </div>
                 </section>
                 <div class=" flex items-center text-gray-700 font-medium ">
-                    <div class="flex items-center mr-6 ">
-                        <span class="hidden xl:block ">v22.16</span>
+                    <div class="flex items-center mr-6 hidden xl:block">
+                        <span class="">v22.16</span>
                         <i class="ri-arrow-down-s-line "></i>
                     </div>
                     <i class="ri-github-fill text-2xl "></i>
@@ -402,7 +402,7 @@
                 </div>
 
             </div>
-            <div class="h-screen w-full overflow-y-scroll pr-5 pb-32">
+            <div class="h-screen w-full overflow-y-scroll md:pr-5 pb-20">
                 <h1 class="text-5xl pt-4 font-bold">Getting started with Tailwind CSS</h1>
                 <p class="text-2xl font-normal py-3 text-gray-600">Learn Tailwind the way that best matches your learning style.</p>
 
@@ -446,140 +446,142 @@
                         <p class="text-lg w-48 m-0 p-0 width items-center bg-white px-3 py-2 rounded-lg text-black font-semibold">Browse components</p>
                     </div>
                 </div>
-                <h1 class="text-4xl font-bold mt-10 mb-5">What’s new in Tailwind</h1>
+                <h1 class="text-4xl font-bold mt-10 mb-5 px-2 md:px-0 text-blue-600">What’s new in Tailwind</h1>
                 <div class="
+                    px-2
+                    md:px-0
                     mb-10
                     grid gap-4
                     grid-cols-2
                     md:grid-cols-3 
-                    ">
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                   ">
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-focus-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Focus Ring Utilities</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Focus Ring Utilities</p>
                     </div>
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-contrast-2-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Dark Mode</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Dark Mode</p>
                     </div>
 
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-line-chart-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Extended Color Palette</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Extended Color Palette</p>
                     </div>
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-stack-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Extend Variants</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Extend Variants</p>
                     </div>
 
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p>
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-window-fill text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Extra Wide Breakpoint</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Extra Wide Breakpoint</p>
                     </div>
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-table-2 text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Shareable Presets</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Shareable Presets</p>
                     </div>
 
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-layout-6-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Gradients</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Gradients</p>
                     </div>
-                    <div class="relative flex flex-col items-center justify-center w-full pt-10 pb-4 rounded-3xl border">
-                        <!-- <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-xl px-2 bg-pink-100">2.0+</p> -->
+                    <div class="relative flex flex-col items-center justify-center w-full pt-10 rounded-3xl border">
+                        <p class="absolute top-3 right-3 text-pink-600 font-medium border rounded-lg text-sm md:text-lg md:rounded-xl px-2 bg-pink-100">2.0+</p>
                         <i class="ri-file-chart-line text-4xl"></i>
-                        <p class="text-xl font-semibold pt-3">Animations</p>
+                        <p class="text-xl font-semibold mt-3 text-center mb-4 h-14">Animations</p>
                     </div>
                 </div>
-                <div class="md:flex items-start justify-between mb-3">
-                    <h1 class="text-4xl font-bold md:mb-5">Latest Updates</h1>
-                    <p class="text-xl font-normal mt-2">View all the latest updates</p>
+                <div class="md:flex ml-2 md:ml-0 items-start justify-between mb-3">
+                    <h1 class="text-4xl font-bold md:mb-5 text-blue-600 md:text-black">Latest Updates</h1>
+                    <p class="text-xl font-normal mt-2 text-blue-500 md:text-black">View all the latest updates</p>
                 </div>
-                <div class="w-full p-4 rounded-3xl bg-gray-200 text-gray-600 transition duration-300">
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                <div class="w-full p-2 md:p-4 md:rounded-2xl lg:rounded-3xl bg-gray-200 text-gray-600 transition duration-300">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded md:rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Jun 18. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Jun 18. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">Tailwind CSS v2.2</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Jun 18. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">Tailwind CSS v2.2</p>
                             <p class="text-lg">Over the last few weeks, we've been having a ton of fun dumping new and exciting features into Tailwind. Now feels like the right time to cut a release, so here it is — Tailwind CSS v2.2! We've built-in a new high-performance
                                 CLI tool, added before and after pseudo-element support, introduced new sibling selector variants, the ability to style highlighted text, and tons more.</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Apr 6. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Apr 6. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">Tailwind CSS v2.1</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Apr 6. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">Tailwind CSS v2.1</p>
                             <p class="text-lg">We just released Tailwind CSS v2.1 which brings the new JIT engine to core, adds first-class CSS filter support, and more!</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 15. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Mar 15. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">Welcoming James McDonald to Tailwind Labs</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Mar 15. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">Welcoming James McDonald to Tailwind Labs</p>
                             <p class="text-lg">One of the hardest constraints we've had to deal with as we've improved Tailwind CSS over the years is the generated file size in development. With enough customizations to your config file, the generated CSS can reach 10mb
                                 or more, and there's only so much CSS that build tools and even the browser itself will comfortably tolerate.</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 15. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Mar 15. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">"Tailwind CSS: From Zero to Production" on YouTube</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Mar 15. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">"Tailwind CSS: From Zero to Production" on YouTube</p>
                             <p class="text-lg">Today we're excited to release Tailwind CSS: From Zero to Production, a new screencast series that teaches you everything you need to know to get up and running with Tailwind CSS v2.0 from scratch.</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Sep 15. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Sep 15. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">"Welcoming David Luhr to Tailwind Labs</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Sep 15. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">"Welcoming David Luhr to Tailwind Labs</p>
                             <p class="text-lg">We started working with David Luhr last summer on a project-by-project basis to help us develop a Figma version of Tailwind UI (almost ready!), as well as to leverage his accessibility expertise when building Tailwind UI templates,
                                 ensuring we were following best practices and delivering markup that would work for everyone, no matter what tools they use to browse the web. Today we're excited to share that David has joined the team full-time!</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">June 15. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">June 15. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">"Multi-line truncation with @tailwindcss/line-clamp</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">June 15. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">"Multi-line truncation with @tailwindcss/line-clamp</p>
                             <p class="text-lg">Imagine you're implementing a beautiful design you or someone on your team carefully crafted in Figma. You've nailed all the different layouts at each breakpoint, perfected the whitespace and typography, and the photography
                                 you're using is really bringing the design to life.</p>
                         </div>
                     </div>
-                    <div class="flex p-4 hover:bg-white rounded-lg">
-                        <div class="flex min-w-40">
+                    <div class="flex p-2 md:p-4 hover:bg-white rounded-lg">
+                        <div class="flex flex-col md:flex-row md:max-w-40">
                             <i class="ri-record-circle-line text-2xl"></i>
                             <p class="text-xl m-0 py-0 pl-2 pr-4 hidden md:block">Mar 25. 2021</p>
                         </div>
-                        <div class="w-4/5 ml-3 md:m-0">
-                            <p class="text-xl m-0 py-0 block md:hidden">Mar 25. 2021</p>
-                            <p class="text-xl m-0 p-0 font-semibold text-black">"Tailwind CSS v2.0</p>
+                        <div class="w-full md:w-4/5">
+                            <p class="text-xl m-0 py-0 mt-0.5 pl-2 block md:hidden">Mar 25. 2021</p>
+                            <p class="text-xl m-0 p-0 mt-0.5 font-semibold text-black">"Tailwind CSS v2.0</p>
                             <p class="text-lg">Today we're finally releasing Tailwind CSS v2.0, including an all-new color palette, dark mode support, and tons more!.</p>
                         </div>
                     </div>
