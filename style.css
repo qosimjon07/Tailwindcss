@@ -30,3 +30,9 @@ body {
 .gradient {
     background: linear-gradient(180.89deg, rgb(14, 13, 13) -0.53%, rgb(56, 55, 55) 140%);
 }
+
+.hrb {
+    height: 100%;
+    border-left: 1px solid white;
+    margin: 0 20px;
+}
